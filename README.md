@@ -11,6 +11,9 @@ vault contains is the vault's own business — the section notes in its `pages/`
 folder say which folders are collections, where they land on the site, and how
 each one is drawn.
 
+New to it? **[docs/starting-a-new-site.md](docs/starting-a-new-site.md)** is the
+walkthrough, and the pitfalls. What follows is the reference.
+
 ## What a vault says about itself
 
 `pages/Site.md` carries the chrome: title, subtitle, description, `domain:`, the
