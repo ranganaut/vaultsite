@@ -30,9 +30,16 @@
   }
 
   /* ---------- masthead ---------- */
-  header.mast{position:relative; overflow:hidden}
+  /* plain draws nothing to float over, so .mast-type stays in flow and gives
+     the header its height; terrain draws a landform, so the title floats
+     over it instead, and only then does the header need to clip to it. */
+  header.mast{position:relative}
+  header.mast:has(#terrain){overflow:hidden}
   #terrain{display:block; width:100%; height:56vh; min-height:340px; max-height:520px}
   .mast-type{
+    position:static; padding:2.6rem 0 1.8rem;
+  }
+  header.mast:has(#terrain) .mast-type{
     position:absolute; left:0; right:0; top:0; padding:2.4rem 0 0;
     pointer-events:none;
   }
@@ -49,6 +56,8 @@
     line-height:1; border-radius:3px; user-select:none;
     box-shadow:inset 0 0 0 1px rgba(0,0,0,.12);
   }
+  /* no seal set: an empty square would just be a stray colour swatch */
+  .seal:empty{display:none}
 
   /* ---------- sections ---------- */
   section{padding:4.6rem 0 0}
