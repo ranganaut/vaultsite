@@ -1,0 +1,55 @@
+/* Mermaid, drawn in the survey palette. Loaded only by pages that have a
+   diagram on them; every other page on the site carries no diagram code. */
+(function () {
+  if (!window.mermaid) return;
+  var ink = '#1b1917', ink2 = '#3c3833', grey = '#7d776e', grey2 = '#a29b90',
+      paper = '#f2ede1', paper2 = '#eae3d4', red = '#b42718';
+  window.mermaid.initialize({
+    startOnLoad: true,
+    securityLevel: 'strict',
+    theme: 'base',
+    fontFamily: "'Iowan Old Style', Palatino, Georgia, serif",
+    fontSize: 15,
+    flowchart: { curve: 'basis', useMaxWidth: true, padding: 14 },
+    sequence: { useMaxWidth: true },
+    themeVariables: {
+      background: 'transparent',
+      primaryColor: paper2,
+      primaryTextColor: ink,
+      primaryBorderColor: grey,
+      secondaryColor: paper,
+      tertiaryColor: paper,
+      lineColor: grey,
+      textColor: ink2,
+      mainBkg: paper2,
+      nodeBorder: grey,
+      clusterBkg: 'transparent',
+      clusterBorder: grey2,
+      titleColor: ink,
+      edgeLabelBackground: paper,
+      noteBkgColor: paper2,
+      noteTextColor: ink2,
+      noteBorderColor: grey2,
+      actorBkg: paper2,
+      actorBorder: grey,
+      actorTextColor: ink,
+      signalColor: grey,
+      signalTextColor: ink2,
+      labelBoxBkgColor: paper2,
+      labelBoxBorderColor: grey,
+      labelTextColor: ink,
+      loopTextColor: ink2,
+      activationBkgColor: paper3(),
+      sectionBkgColor: paper,
+      altSectionBkgColor: paper2,
+      gridColor: grey2,
+      doneTaskBkgColor: paper2,
+      critBorderColor: red,
+      critBkgColor: paper2,
+      taskTextColor: ink,
+      errorBkgColor: paper2,
+      errorTextColor: red,
+    },
+  });
+  function paper3() { return '#e2dac9'; }
+})();

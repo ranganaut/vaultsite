@@ -1,0 +1,13 @@
+{
+  "name": "vaultsite",
+  "version": "1.0.0",
+  "description": "Turn an Obsidian vault into a website. Every word on the page comes from the vault.",
+  "type": "module",
+  "bin": { "vaultsite": "bin/vaultsite.mjs" },
+  "main": "lib/build.mjs",
+  "exports": { ".": "./lib/build.mjs" },
+  "files": ["bin", "lib", "templates", "assets", "vendor"],
+  "engines": { "node": ">=20" },
+  "license": "MIT",
+  "dependencies": {}
+}
